@@ -1,0 +1,67 @@
+Enunciado
+Você foi contratado para desenvolver um Sistema de Gerenciamento de Propriedades Imobiliárias para facilitar o controle e a visualização de propriedades, clientes, agentes e transações (compra ou aluguel). Este sistema é baseado em um banco de dados relacional SQL e permitirá o gerenciamento completo das operações imobiliárias da empresa. Abaixo, são descritas as principais funcionalidades e requisitos do sistema.
+
+Objetivo do Projeto:
+Criar um banco de dados SQL para gerenciar informações sobre:
+
+Propriedades: Detalhes das propriedades, como endereço, tipo (casa, apartamento, terreno), valor e status (disponível, vendido, alugado).
+Clientes: Informações de clientes, incluindo nome, telefone, e-mail e tipo de interesse (compra ou aluguel).
+Agentes: Informações dos agentes imobiliários, como nome, telefone e e-mail.
+Transações: Registro de transações de compra e aluguel, relacionando clientes, agentes e propriedades, com data e tipo de transação.
+Requisitos do Sistema:
+
+Criação do banco de dados e tabelas para armazenar as informações descritas acima.
+Inserção de dados fictícios para simulação de operações do sistema.
+Consultas SQL para visualizar dados específicos, como propriedades disponíveis, transações de compra, e informações detalhadas de cada transação.
+Operações de atualização e exclusão para modificar dados, como atualizar o status de uma propriedade ou excluir um cliente.
+Uso de JOINs para relacionar e exibir dados entre as tabelas.
+Instruções:
+Cada funcionalidade deve ser implementada por meio de um script SQL único e testado em um ambiente de banco de dados SQL (por exemplo, MySQL). O projeto deve incluir um arquivo README com instruções e descrições do sistema e um arquivo .gitignore para gerenciamento de arquivos no repositório Git.
+
+# Sistema de Gerenciamento de Propriedades Imobiliárias
+
+Este projeto é um sistema de gerenciamento de propriedades imobiliárias que permite controlar propriedades, clientes, agentes e transações de compra e aluguel. O sistema é construído usando SQL para gerenciar o banco de dados relacional com todas as operações necessárias para um sistema imobiliário.
+
+## Funcionalidades
+
+1. **Propriedades:** Armazenamento e controle de dados sobre propriedades (ex.: endereço, tipo, valor, status).
+2. **Clientes:** Armazenamento de dados dos clientes e interesse em compra ou aluguel.
+3. **Agentes:** Armazenamento das informações de contato dos agentes imobiliários.
+4. **Transações:** Registro de transações de compra e aluguel, associando clientes, agentes e propriedades.
+5. **Consultas e Relacionamentos:** Operações SQL para consultas específicas e uso de JOIN para visualização de dados integrados.
+
+## Estrutura das Tabelas
+
+- **Propriedades:** 
+  - `id`: Identificador único da propriedade.
+  - `endereco`: Endereço da propriedade.
+  - `tipo`: Tipo da propriedade (casa, apartamento, terreno).
+  - `valor`: Valor estimado da propriedade.
+  - `status`: Status atual da propriedade (disponível, vendido, alugado).
+
+- **Clientes:** 
+  - `id`: Identificador único do cliente.
+  - `nome`: Nome do cliente.
+  - `telefone`: Telefone de contato do cliente.
+  - `email`: E-mail do cliente.
+  - `interesse`: Tipo de interesse do cliente (compra ou aluguel).
+
+- **Agentes:** 
+  - `id`: Identificador único do agente.
+  - `nome`: Nome do agente.
+  - `telefone`: Telefone de contato do agente.
+  - `email`: E-mail do agente.
+
+- **Transações:** 
+  - `id`: Identificador único da transação.
+  - `cliente_id`: Referência ao cliente envolvido na transação.
+  - `agente_id`: Referência ao agente responsável pela transação.
+  - `propriedade_id`: Referência à propriedade negociada.
+  - `data`: Data da transação.
+  - `tipo_transacao`: Tipo de transação (compra ou aluguel).
+
+## Instruções para Uso
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu_usuario/sistema_imobiliario.git
