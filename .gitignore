@@ -1,0 +1,35 @@
+
+---
+
+### **.gitignore**
+
+```gitignore
+# Ignorar arquivos de configurações de ambientes e IDEs
+*.env
+.vscode/
+.idea/
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários e de cache
+*.tmp
+*.temp
+*.cache
+
+# Arquivos de backup e temporários gerados por editores
+*~
+*.bak
+*.swp
+*.swo
+
+# Ignorar arquivos de exportação e backup de banco de dados SQL
+*.sql.bak
+dump.sql
+
+# Ignorar arquivos de sistema do MacOS
+.DS_Store
+
+# Ignorar node_modules e dist caso o projeto seja estendido com um frontend
+node_modules/
+dist/
